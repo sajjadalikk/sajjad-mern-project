@@ -72,15 +72,28 @@ const LoadApplicant = async () =>
           <tbody>
             <tr>
               <td>1.</td>
-              <td>Applicant Name</td>
+              <td>Applicant First Name</td>
               <td>
                 { jobapplicant.applicant_name }
                 
               </td>
               <td><span className="badge bg-danger">55%</span></td>
             </tr>
+
+
             <tr>
               <td>2.</td>
+              <td>Applicant Last Name</td>
+              <td>
+                { jobapplicant.applicant_github }
+                
+              </td>
+              <td><span className="badge bg-danger">55%</span></td>
+            </tr>
+
+
+            <tr>
+              <td>3.</td>
               <td>Applicant Email</td>
               <td>
               { jobapplicant.applicant_email }
@@ -88,7 +101,7 @@ const LoadApplicant = async () =>
               <td><span className="badge bg-warning">70%</span></td>
             </tr>
             <tr>
-              <td>3.</td>
+              <td>4.</td>
               <td>Applicant Contact No</td>
               <td>
               { jobapplicant.applicant_contact }
@@ -96,7 +109,7 @@ const LoadApplicant = async () =>
               <td><span className="badge bg-primary">30%</span></td>
             </tr>
             <tr>
-              <td>4.</td>
+              <td>5.</td>
               <td>Applicant LinkedIn Profile</td>
               <td>
               { jobapplicant.applicant_linkedin }
@@ -104,14 +117,7 @@ const LoadApplicant = async () =>
               <td><span className="badge bg-success">90%</span></td>
             </tr>
 
-            <tr>
-              <td>5.</td>
-              <td>Applicant Gitub Link</td>
-              <td>
-              { jobapplicant.applicant_github }
-              </td>
-              <td><span className="badge bg-success">90%</span></td>
-            </tr>
+        
 
             <tr>
               <td>6.</td>

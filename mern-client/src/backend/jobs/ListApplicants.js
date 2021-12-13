@@ -67,11 +67,12 @@ const ListApplicants = ({prop}) => {
                 <table id="example1" className="table table-bordered table-striped">
                   <thead>
                     <tr>
-                      <th>Applicant Name</th>
+                      <th>Applicant First Name</th>
+                      <th>Applicant Last Name</th>
                       <th>Applicant Email</th>
                       <th>Applicant Contact No</th>
                       <th>Applicant LinkedIn</th>
-                      <th>Applicant Github</th>
+                     
                       <th>View Detail</th>
                    
                     </tr>
@@ -93,6 +94,7 @@ const ListApplicants = ({prop}) => {
                   return <tr key={key} >
         
                 <td>{applicant.applicant_name}</td>
+                <td>{applicant.applicant_github}</td>
                 <td>{applicant.applicant_email}</td>
                 <td>{applicant.applicant_contact}</td>
                 <td>{applicant.applicant_linkedin}</td>
@@ -107,11 +109,11 @@ const ListApplicants = ({prop}) => {
                   </tbody>
                   <tfoot>
                     <tr>
-                      <th>Applicant Name</th>
+                    <th>Applicant First Name</th>
+                    <th>Applicant Last Name</th>
                       <th>Applicant Email</th>
                       <th>Applicant Contact No</th>
                       <th>Applicant LinkedIn</th>
-                      <th>Applicant Github</th>
                       <th>View Detail</th>
                     </tr>
                   </tfoot>

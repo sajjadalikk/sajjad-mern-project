@@ -100,12 +100,26 @@ const ApplyJob = () => {
 
           
             <div className="input-group mb-3">
-              <input type="text" className="form-control" required placeholder="Full name" 
+              <input type="text" className="form-control" required placeholder="First name" 
               value={applicant_name}
-              onChange={(e)=>setName(e.target.value)} />
+              onChange={(e)=>setName(e.target.value)} 
+              pattern="[a-zA-Z\s]+" title="Enter Only Alphabats"/>
               <div className="input-group-append">
                 <div className="input-group-text">
                   <span className="fas fa-user" />
+                </div>
+              </div>
+            </div>
+
+
+            <div className="input-group mb-3">
+              <input type="text" className="form-control" required placeholder="Last name" 
+              value={applicant_github}
+              onChange={(e)=>setGithub(e.target.value)}
+              pattern="[a-zA-Z\s]+" title="Enter Only Alphabats"/> />
+              <div className="input-group-append">
+                <div className="input-group-text">
+                  <span className="fas fa-github" />
                 </div>
               </div>
             </div>
@@ -116,7 +130,8 @@ const ApplyJob = () => {
               <input type="email" className="form-control" required placeholder="Email"
               value={applicant_email}
               onChange={(e)=>setEmail(e.target.value)}
-               />
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Please Enter Valid Email" />
               <div className="input-group-append">
                 <div className="input-group-text">
                   <span className="fas fa-envelope" />
@@ -127,7 +142,8 @@ const ApplyJob = () => {
             <div className="input-group mb-3">
               <input type="text" className="form-control" required placeholder="Contact No" 
               value={applicant_contact}
-              onChange={(e)=>setContact(e.target.value)} />
+              onChange={(e)=>setContact(e.target.value)} 
+              pattern="[0-9-]+" title="Enter Numeric values" />
               <div className="input-group-append">
                 <div className="input-group-text">
                   <span className="fas fa-phone" />
@@ -147,29 +163,18 @@ const ApplyJob = () => {
             </div>
 
 
-            <div className="input-group mb-3">
-              <input type="text" className="form-control" required placeholder="Skills" 
-              value={applicant_github}
-              onChange={(e)=>setGithub(e.target.value)} />
-              <div className="input-group-append">
-                <div className="input-group-text">
-                  <span className="fas fa-github" />
-                </div>
-              </div>
-            </div>
+      
 
             
             <div className="input-group mb-3">
               <input type="file" className="form-control" name="applicant_cv" required placeholder="CV" 
               //  onChange={(e)=>setCv(e.target.files[0])}
-              accept=".pdf,.doc,.docx"
+              accept=".pdf"
               onChange={(e)=>setCv(e.target.files)}
                 />
-             
-               {/* onChange={(e)=>setCv(e.target.value)} /> */}
               <div className="input-group-append">
                 <div className="input-group-text">
-                  <span className="fas fa-github" />
+                  <span>Only Pdf</span> 
                 </div>
               </div>
             </div>

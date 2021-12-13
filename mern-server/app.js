@@ -502,6 +502,22 @@ file.mv('./public/uploads/'+filename , function(err)
   });
   var message = '';
   message = '<table cellpadding="0" cellspacing="1" width="35%" style="font-family:verdana;font-size:11px;border:2px solid;">';
+
+  message +='<tr>';
+  message += '<td width="35%">Applicant Name:</td>';
+  message += '<td>'+req.body.applicant_name+'</td>';
+  message +='</tr>';
+
+  message +='<tr>';
+  message += '<td width="35%">Applicant Email:</td>';
+  message += '<td>'+req.body.applicant_email+'</td>';
+  message +='</tr>';
+
+  message +='<tr>';
+  message += '<td width="35%">Applicant Contact No:</td>';
+  message += '<td>'+req.body.applicant_contact+'</td>';
+  message +='</tr>';
+
   message +='<tr>';
   message += '<td width="35%">Job Title:</td>';
   message += '<td>'+job_title+'</td>';
@@ -524,7 +540,12 @@ file.mv('./public/uploads/'+filename , function(err)
     from: 'engineersajjadalikk@gmail.com',
     to: company_email,
     subject: 'Job Application Received',
-    html: message
+    html: message,
+    attachments: [{
+      filename: filename,
+      path: `http://localhost:5000/${filename}`,
+      contentType: 'application/pdf'
+    }]
   };
   
   transporter.sendMail(mailOptions, function(error, info){

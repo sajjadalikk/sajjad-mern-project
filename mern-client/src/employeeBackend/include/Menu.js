@@ -20,7 +20,7 @@ export default class Menu extends Component {
           <img src="http://localhost:3000/dist/img/user2-160x160.jpg" className="img-circle elevation-2" alt="User Image" />
         </div>
         <div className="info">
-        <a href="javascript:void(0)" className="d-block">Alexander Pierce</a>
+        <a href="" className="d-block">Alexander Pierce</a>
         </div>
       </div>
       {/* Sidebar Menu */}
@@ -29,7 +29,7 @@ export default class Menu extends Component {
           {/* Add icons to the links using the .nav-icon class
            with font-awesome or any other icon font library */}
           <li className="nav-item has-treeview menu-open">
-          <a href="javascript:void(0)" className="nav-link active">
+          <a href="" className="nav-link active">
               <i className="nav-icon fas fa-tachometer-alt" />
               <p>
                 Dashboard
@@ -48,7 +48,7 @@ export default class Menu extends Component {
           </li>
           
           <li className="nav-item has-treeview">
-          <a href="javascript:void(0)" className="nav-link">
+          <a href="" className="nav-link">
               <i className="nav-icon fas fa-copy" />
               <p>
                 Login Information
@@ -68,7 +68,7 @@ export default class Menu extends Component {
 
 
           <li className="nav-item has-treeview">
-          <a href="javascript:void(0)" className="nav-link">
+          <a href="" className="nav-link">
               <i className="nav-icon fas fa-chart-pie" />
               <p>
                 Employee Information
@@ -87,7 +87,7 @@ export default class Menu extends Component {
           </li>
           
           <li className="nav-item has-treeview">
-          <a href="javascript:void(0)" className="nav-link">
+          <a href="" className="nav-link">
               <i className="nav-icon fas fa-edit" />
               <p>
                Jobs
